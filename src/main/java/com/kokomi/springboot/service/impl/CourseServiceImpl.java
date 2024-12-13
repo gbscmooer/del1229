@@ -10,14 +10,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import javax.annotation.Resource;
 
-/**
- * <p>
- *  服务实现类
- * </p>
- *
- * @author 青哥哥
- * @since 2022-03-03
- */
 @Service
 public class CourseServiceImpl extends ServiceImpl<CourseMapper, Course> implements ICourseService {
 

@@ -12,14 +12,6 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Getter;
 import lombok.Setter;
 
-/**
- * <p>
- *
- * </p>
- *
- * @author 青哥哥
- * @since 2022-03-22
- */
 @Getter
 @Setter
   @TableName("t_comment")

@@ -9,8 +9,8 @@
         </div>
       </div>
       <div class="form-wrapper">
-        <h2 class="title">登 录</h2>
-        <p class="subtitle">登录界面</p>
+        <h2 class="title">黑 塔 空 间 站</h2>
+        <p class="subtitle">Herta Space Station</p>
 
         <el-form :model="user" :rules="rules" ref="userForm" class="login-form">
           <el-form-item prop="username">
