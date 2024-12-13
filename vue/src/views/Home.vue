@@ -1,66 +1,157 @@
 <template>
-  <div style="color: #666;font-size: 14px;">
-    <div style="padding-bottom: 20px">
-      <b>欢迎你！{{ user.nickname }}</b>
+  <div class="space-station">
+    <div class="content-container">
+      <!-- 头部区域 -->
+      <div class="header">
+        <h1 class="title">黑塔空间站</h1>
+        <p class="subtitle">星际科研中心</p>
+      </div>
+
+      <!-- 主要展示卡片 -->
+      <div class="main-card">
+        <div class="card-image">
+          <img src="../assets/g1.jpg" height="450" width="1920"/></div>
+        <div class="card-content">
+          <h2>欢迎来到黑塔空间站</h2>
+          <p class="description">
+            这是一座围绕湛蓝星公转运行的空间站，是游戏中开拓者来到的第一个区域。
+            这里汇集了天才俱乐部成员、星际和平公司员工及各方学者，致力于从银河各处
+            收集遗器和奇物，建立系统的观测与研究方法。
+          </p>
+          <div class="features">
+            <div class="feature">
+              <h3>研究项目</h3>
+              <p>异星文物收集与研究</p>
+            </div>
+            <div class="feature">
+              <h3>设施概况</h3>
+              <p>博物馆式星际舰船</p>
+            </div>
+            <div class="feature">
+              <h3>科研团队</h3>
+              <p>跨星际研究人员</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <el-card>
-      青哥出手，马上拥有
-      <el-divider />
-      B站所有的付费笔记、源码、代码生成器、成品项目等都打包在VIP群，<b>99</b>元上车<br><br>
-      3款代码生成器打骨折，帮你快速完成毕设，<b>9.9</b>元上车，如果需要，加UP QQ：1938976892<br><br>
-      <a style="color: #1E90FF" href="https://mp.weixin.qq.com/s?__biz=MzAwMTA0OTg3Ng==&mid=2247492593&idx=1&sn=e2ccafcd4364c54a7de20fcd4d474294&chksm=9add378aadaabe9c982a8859f903f1c475deba3420bd0a2d8c11cf5c427e2bb5da00b0a39dac#rd" target="_blank">知识星球</a>
-      新人特惠活动进行中，关于本项目的任何问题都可以得到1对1的解答服务，
-      现在 <a style="color: red; font-size: 20px" href="https://t.zsxq.com/08x4zzHWo" target="_blank">戳我加入</a><br><br>
-    </el-card>
-    <div style="height: 1px; background: #ddd; margin: 20px 0"/>
-
-    <el-row :gutter="30">
-      <el-col :span="12">
-        <div style="padding: 20px 0; font-size: 20px">小白做毕设专用框架</div>
-        <div>
-          这是一款专门针对毕设系统设计的框架，代码简单，结构清晰，如果你是小白，一定不要错过哦
-        </div>
-        <div class="m-10"><el-button type="danger"><i class="el-icon-coin"></i> 免费开源</el-button></div>
-        <div class="m-10"><el-button type="primary"><i class="el-icon-s-custom"></i> 交流QQ群：492402698（满）</el-button>
-          <el-button type="primary">715739443</el-button></div>
-        <div class="m-10">
-          <el-button type="primary"><i class="el-icon-link"></i> <a style="color: #fff" href="https://github.com/xqnode/pure-design">Github源码</a></el-button>
-          <el-button type="primary"><i class="el-icon-link"></i> <a style="color: #fff" href="https://www.bilibili.com/video/BV1U44y1W77D">B站视频讲解</a></el-button>
-        </div>
-      </el-col>
-      <el-col :span="12">
-        <div style="padding: 20px 0; font-size: 20px">技术栈</div>
-        <el-row>
-          <el-col :span="12" style="line-height: 30px">
-            <div><b>后端</b></div>
-            <div>SpringBoot2</div>
-            <div>Hutool</div>
-            <div>Poi</div>
-            <div>Lombok</div>
-            <div>Mybatis/Mybatis-plus</div>
-          </el-col>
-          <el-col :span="12" style="line-height: 30px">
-            <b>前端</b>
-            <div>Vue2</div>
-            <div>Vue-Router</div>
-            <div>VueX</div>
-            <div>ElementUI</div>
-            <div>Axios</div>
-          </el-col>
-        </el-row>
-      </el-col>
-    </el-row>
-
   </div>
 </template>
 
 <script>
 export default {
-  name: "Home",
-  data() {
-    return {
-      user: localStorage.getItem("user") ? JSON.parse(localStorage.getItem("user")) : {}
-    }
-  }
+  name: 'SpaceStation'
 }
 </script>
+
+<style scoped>
+.space-station {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #e0f3ff 0%, #fff0f9 100%);
+  padding: 40px 20px;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #2b4d7e;
+  margin-bottom: 12px;
+}
+
+.subtitle {
+  font-size: 24px;
+  color: #6e8bb7;
+}
+
+.main-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(20px);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  border: 1px solid rgba(148, 190, 233, 0.3);
+}
+
+.main-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(116, 169, 224, 0.15);
+}
+
+.card-image {
+  height: 400px;
+  background: #eef4ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6e8bb7;
+}
+
+.card-content {
+  padding: 40px;
+}
+
+.card-content h2 {
+  font-size: 32px;
+  color: #2b4d7e;
+  margin-bottom: 20px;
+}
+
+.description {
+  font-size: 16px;
+  color: #6e8bb7;
+  line-height: 1.8;
+  margin-bottom: 40px;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.feature {
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 15px;
+  border: 1px solid rgba(148, 190, 233, 0.2);
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #2b4d7e;
+  margin-bottom: 10px;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #6e8bb7;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 36px;
+  }
+
+  .subtitle {
+    font-size: 20px;
+  }
+
+  .card-image {
+    height: 300px;
+  }
+
+  .card-content {
+    padding: 30px;
+  }
+}
+</style>

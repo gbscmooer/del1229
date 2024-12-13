@@ -17,15 +17,7 @@ import com.kokomi.springboot.service.IArticleService;
 import com.kokomi.springboot.entity.Article;
 
 import org.springframework.web.bind.annotation.RestController;
-
-/**
- * <p>
- * 前端控制器
- * </p>
- *
- * @author 青哥哥
- * @since 2022-03-22
- */
+//前端控制器
 @RestController
 @RequestMapping("/article")
 public class ArticleController {
