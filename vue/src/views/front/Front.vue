@@ -4,7 +4,7 @@
     <div style="display: flex; height: 60px; line-height: 60px; border-bottom: 1px solid #eee">
       <div style="width: 300px; display: flex; padding-left: 30px">
         <div style="width: 60px">
-          <img src="../../assets/logo1.png" alt="" style="width: 50px; position: relative; top: 5px; right: 0">
+          <img src="../../assets/World_Herta_Space_Station.webp" alt="" style="width: 50px; position: relative; top: 5px; right: 0">
         </div>
         <div style="flex: 1">欢迎来到xx系统</div>
       </div>
