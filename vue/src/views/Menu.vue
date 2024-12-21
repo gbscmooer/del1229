@@ -200,16 +200,141 @@ export default {
   }
 }
 </script>
-
-
 <style>
+/* 全局渐变背景 */
+.el-main {
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.06) 0%, rgba(244, 114, 182, 0.12) 100%);
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* 表格样式 */
 .headerBg {
-  background: #eee!important;
+  background: rgba(99, 102, 241, 0.1) !important;
+  color: #6366f1 !important;
+  font-weight: bold;
 }
-.fontSize18{
-  font-size: 18px;
+
+.el-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.9) !important;
+  backdrop-filter: blur(10px);
 }
-.fontSize12{
-  font-size: 12px;
+
+.el-table th {
+  background: rgba(99, 102, 241, 0.1) !important;
+}
+
+.el-table tr:hover td {
+  background: rgba(244, 114, 182, 0.05) !important;
+}
+
+/* 按钮样式 */
+.el-button {
+  border-radius: 20px;
+  transition: all 0.3s;
+}
+
+.el-button--primary {
+  background: linear-gradient(45deg, #6366f1, #818cf8);
+  border: none;
+}
+
+.el-button--primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+}
+
+.el-button--danger {
+  background: linear-gradient(45deg, #ef4444, #f87171);
+  border: none;
+}
+
+.el-button--warning {
+  background: linear-gradient(45deg, #f59e0b, #fbbf24);
+  border: none;
+}
+
+/* 输入框样式 */
+.el-input__inner {
+  border-radius: 20px;
+  border: 1px solid rgba(99, 102, 241, 0.2);
+}
+
+.el-input__inner:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 8px rgba(0, 6, 255, 0.2);
+}
+
+/* 分页样式 */
+.el-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.el-pagination button {
+  background: rgba(255, 255, 255, 0.9);
+  border-radius: 4px;
+}
+
+/* 对话框样式 */
+.el-dialog {
+  border-radius: 12px;
+  overflow: hidden;
+  backdrop-filter: blur(10px);
+  background: rgba(188, 107, 107, 0.95);
+}
+
+.el-dialog__header {
+  background: linear-gradient(45deg, #6366f1, #f472b6);
+  padding: 15px 20px;
+}
+
+.el-dialog__title {
+  color: white;
+}
+
+/* Tag样式 */
+.el-tag--primary {
+  background: rgba(99, 102, 241, 0.1);
+  border-color: #6366f1;
+  color: #6366f1;
+}
+
+.el-tag--warning {
+  background: rgba(245, 158, 11, 0.1);
+  border-color: #f59e0b;
+  color: #f59e0b;
+}
+
+.el-tag--success {
+  background: rgba(34, 197, 94, 0.1);
+  border-color: #22c55e;
+  color: #22c55e;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.el-table__body,
+.el-dialog,
+.el-form-item {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* 响应式调整 */
+@media screen and (max-width: 768px) {
+  .el-dialog {
+    width: 90% !important;
+  }
+
+  .el-input {
+    margin: 5px 0;
+  }
 }
 </style>
