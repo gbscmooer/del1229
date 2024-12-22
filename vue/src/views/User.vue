@@ -44,8 +44,8 @@
       <el-table-column prop="address" label="地址"></el-table-column>
       <el-table-column label="操作"  width="500" align="center">
         <template slot-scope="scope">
-          <el-button type="primary" @click="lookCourse(scope.row.courses)" v-if="scope.row.role === 'ROLE_TEACHER'">查看教授课程 <i class="el-icon-document"></i></el-button>
-          <el-button type="warning" @click="lookStuCourse(scope.row.stuCourses)" v-if="scope.row.role === 'ROLE_STUDENT'">查看已选课程 <i class="el-icon-document"></i></el-button>
+          <el-button type="primary" @click="lookCourse(scope.row.courses)" v-if="scope.row.role === 'ROLE_TEACHER'">查看主持项目 <i class="el-icon-document"></i></el-button>
+          <el-button type="warning" @click="lookStuCourse(scope.row.stuCourses)" v-if="scope.row.role === 'ROLE_STUDENT'">查看已选项目 <i class="el-icon-document"></i></el-button>
           <el-button type="success" @click="handleEdit(scope.row)">编辑 <i class="el-icon-edit"></i></el-button>
           <el-popconfirm
               class="ml-5"
@@ -105,14 +105,12 @@
     <el-dialog title="课程信息" :visible.sync="vis" width="30%" >
       <el-table :data="courses" border stripe>
         <el-table-column prop="name" label="课程名称"></el-table-column>
-        <el-table-column prop="score" label="学分"></el-table-column>
       </el-table>
     </el-dialog>
 
     <el-dialog title="课程信息" :visible.sync="stuVis" width="30%" >
       <el-table :data="stuCourses" border stripe>
         <el-table-column prop="name" label="课程名称"></el-table-column>
-        <el-table-column prop="score" label="学分"></el-table-column>
       </el-table>
     </el-dialog>
   </div>

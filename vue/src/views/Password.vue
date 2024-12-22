@@ -87,7 +87,7 @@ export default {
   padding: 20px;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(45deg, #FF8DAA, #8E9BFF, #B49BFF); /* 粉蓝紫渐变 */
+  background: linear-gradient(45deg, rgba(255, 141, 170, 0.35), #8E9BFF, #B49BFF); /* 粉蓝紫渐变 */
   background-size: 400% 400%;
   animation: gradient 15s ease infinite;
 }
@@ -150,7 +150,7 @@ export default {
   width: 180px;
   height: 42px;
   border-radius: 21px;
-  background: linear-gradient(45deg, #FF6B6B, #4ECDC4);
+  background: linear-gradient(45deg, rgba(255, 107, 107, 0.39), #4ECDC4);
   border: none;
   font-weight: 600;
   letter-spacing: 1px;

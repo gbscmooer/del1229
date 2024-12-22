@@ -1,4 +1,6 @@
 <template>
+  <div class="container">
+    <div class="search-wrapper">
   <div>
     <div style="margin: 10px 0">
       <el-input style="width: 200px" placeholder="请输入名称" suffix-icon="el-icon-search" v-model="name"></el-input>
@@ -94,6 +96,8 @@
       </el-card>
     </el-dialog>
 
+  </div>
+    </div>
   </div>
 </template>
 
@@ -231,5 +235,65 @@ export default {
 </script>
 
 <style scoped>
+/* 整体容器 */
+.container {
+  padding: 20px;
+  background: linear-gradient(to right, #f8f9fa, #ffffff);
+}
 
+.search-wrapper {
+  margin: 20px 0;
+  padding: 15px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-wrapper:hover {
+  box-shadow: 0 4px 20px 0 rgba(0, 0, 0, 0.15);
+}
+/deep/ .el-button {
+  transition: all 0.3s ease;
+}
+
+/deep/ .el-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/deep/ .el-button--primary {
+  background: linear-gradient(135deg, #1890ff 0%, #36a7ff 100%);
+  border: none;
+}
+
+/deep/ .el-table {
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 </style>

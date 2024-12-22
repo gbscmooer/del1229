@@ -12,7 +12,7 @@
         <div class="card-image">
           <img src="../assets/g1.jpg" height="450" width="1920"/></div>
         <div class="card-content">
-          <h2>欢迎来到黑塔空间站</h2>
+          <h2>黑塔空间站管理端</h2>
           <p class="description">
             这是一座围绕湛蓝星公转运行的空间站，是游戏中开拓者来到的第一个区域。
             这里汇集了天才俱乐部成员、星际和平公司员工及各方学者，致力于从银河各处

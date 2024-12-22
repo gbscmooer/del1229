@@ -4,6 +4,7 @@
       <el-form label-width="80px" size="small">
   <el-card style="width: 500px;">
     <el-form label-width="80px" size="small">
+
       <el-upload
           class="avatar-uploader"
           :action="'http://' + serverIp +':9090/file/upload'"

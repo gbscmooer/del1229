@@ -133,8 +133,8 @@ export default {
 
 /* 修改和添加相关样式 */
 .animation-container {
-  width: 100%;
-  height: 100%;
+  width: 80%;
+  height: 80%;
   position: relative; /* 添加相对定位 */
 }
 

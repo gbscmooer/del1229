@@ -284,7 +284,7 @@ export default {
   border-radius: 12px;
   overflow: hidden;
   backdrop-filter: blur(10px);
-  background: rgba(188, 107, 107, 0.95);
+  background: rgb(255, 255, 255);
 }
 
 .el-dialog__header {

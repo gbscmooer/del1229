@@ -1,34 +1,26 @@
 <template>
   <div>
 <!--    头部-->
-    <div style="display: flex; height: 60px; line-height: 60px; border-bottom: 1px solid #eee">
-      <div style="width: 300px; display: flex; padding-left: 30px">
-        <div style="width: 60px">
-          <img src="../../assets/World_Herta_Space_Station.webp" alt="" style="width: 50px; position: relative; top: 5px; right: 0">
+    <div style="display: flex; align-items: center; height: 80px; border-bottom: 1px solid #eee">
+      <div style="width: 300px; display: flex; align-items: center; padding-left: 30px">
+        <div style="width: 90px">
+          <img
+              src="../../assets/World_Herta_Space_Station.webp"
+              alt="黑塔空间站"
+              style="width: 80px; height: 70px; object-fit: contain"
+          >
         </div>
-        <div style="flex: 1">欢迎来到xx系统</div>
+        <div style="font-size: 20px; font-weight: 500; color: #333">
+          黑塔空间站
+        </div>
       </div>
       <div style="flex: 1">
 
 
         <el-menu :default-active="'1'" class="el-menu-demo" mode="horizontal" router>
           <el-menu-item index="/front/home">首页</el-menu-item>
-          <el-menu-item index="/front/video">视频播放</el-menu-item>
-          <el-menu-item index="/front/article">文章列表</el-menu-item>
-          <el-submenu index="2">
-            <template slot="title">我的工作台</template>
-            <el-menu-item index="/front/item1">选项1</el-menu-item>
-            <el-menu-item index="2-2">选项2</el-menu-item>
-            <el-menu-item index="2-3">选项3</el-menu-item>
-            <el-submenu index="2-4">
-              <template slot="title">选项4</template>
-              <el-menu-item index="2-4-1">选项1</el-menu-item>
-              <el-menu-item index="2-4-2">选项2</el-menu-item>
-              <el-menu-item index="2-4-3">选项3</el-menu-item>
-            </el-submenu>
-          </el-submenu>
-          <el-menu-item index="3" disabled>消息中心</el-menu-item>
-          <el-menu-item index="4"><a href="https://www.ele.me" target="_blank">订单管理</a></el-menu-item>
+          <el-menu-item index="/front/article">空间站论坛</el-menu-item>
+
         </el-menu>
       </div>
       <div style="width: 200px">
@@ -85,18 +77,139 @@ export default {
 }
 </script>
 
-<style>
-.item{
-  display: inline-block;
-  width: 100px;
+<style scoped>
+/* 页面整体样式 */
+.front-container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+}
 
-  text-align: center;
-  cursor: pointer
+/* 顶部导航样式 */
+.header {
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
-.item a {
-  color: 	#1E90FF;
+
+/* Logo区域 */
+.logo-section {
+  transition: all 0.3s ease;
 }
-.item:hover{
-  background-color: 	LightPink;
+
+.logo-section:hover {
+  transform: translateX(5px);
+}
+
+.logo-image {
+  transition: all 0.3s ease;
+}
+
+.logo-image:hover {
+  transform: scale(1.05);
+}
+
+/* 导航菜单 */
+/deep/ .el-menu {
+  border: none !important;
+  background: transparent !important;
+}
+
+/deep/ .el-menu-item {
+  font-size: 16px;
+  color: #333;
+  transition: all 0.3s ease !important;
+}
+
+/deep/ .el-menu-item:hover {
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%) !important;
+  color: #1890ff !important;
+  transform: translateY(-2px);
+}
+
+/deep/ .el-menu-item.is-active {
+  color: #1890ff !important;
+  font-weight: bold;
+  border-bottom: 2px solid #1890ff !important;
+}
+
+/* 按钮样式 */
+/deep/ .el-button {
+  border-radius: 20px;
+  padding: 8px 20px;
+  transition: all 0.3s ease;
+}
+
+/deep/ .el-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* 用户区域 */
+.user-section {
+  padding-right: 30px;
+}
+
+.user-avatar {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+}
+
+.user-avatar:hover {
+  transform: scale(1.1);
+}
+
+/* 下拉菜单样式 */
+/deep/ .el-dropdown-menu {
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+/deep/ .el-dropdown-menu__item {
+  transition: all 0.3s ease;
+  line-height: 35px;
+}
+
+/deep/ .el-dropdown-menu__item:hover {
+  background: linear-gradient(135deg, #e6f7ff 0%, #f0f5ff 100%);
+  color: #1890ff;
+  transform: translateX(5px);
+}
+
+/* 主内容区域 */
+.main-content {
+  width: 1000px;
+  margin: 20px auto;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.main-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.router-view-container {
+  animation: fadeIn 0.3s ease-out;
 }
 </style>

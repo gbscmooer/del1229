@@ -39,7 +39,6 @@
 </template>
 
 <script>
-// 保持原有的 script 部分不变
 export default {
   name: "Login",
   data() {
@@ -124,7 +123,7 @@ export default {
   transform: translateX(-50%);
   width: 50px;
   height: 3px;
-  background: linear-gradient(90deg, #ff9a9e, #67b3ff);
+  background: linear-gradient(90deg, rgba(255, 154, 158, 0.4), #67b3ff);
   border-radius: 3px;
 }
 
@@ -135,7 +134,7 @@ export default {
 
 .register-btn {
   width: 140px;
-  background: linear-gradient(45deg, #ff9a9e, #67b3ff);
+  background: linear-gradient(45deg, rgba(255, 154, 158, 0.35), #67b3ff);
   border: none;
   transition: all 0.3s ease;
 }

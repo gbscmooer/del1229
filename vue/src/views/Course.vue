@@ -24,11 +24,9 @@
               @selection-change="handleSelectionChange">
       <el-table-column type="selection" width="55"></el-table-column>
       <el-table-column prop="id" label="ID" width="80"></el-table-column>
-      <el-table-column prop="name" label="课程名称"></el-table-column>
-      <el-table-column prop="score" label="文件类型"></el-table-column>
-      <el-table-column prop="times" label="课时"></el-table-column>
-      <el-table-column prop="teacher" label="授课老师"></el-table-column>
-      <el-table-column label="启用">
+      <el-table-column prop="name" label="项目标题"></el-table-column>
+      <el-table-column prop="teacher" label="导师"></el-table-column>
+      <el-table-column label="启用状态">
         <template slot-scope="scope">
           <el-switch v-model="scope.row.state" active-color="#13ce66" inactive-color="#ccc"
                      @change="changeEnable(scope.row)"></el-switch>
@@ -36,7 +34,7 @@
       </el-table-column>
       <el-table-column label="操作" width="280" align="center">
         <template slot-scope="scope">
-          <el-button type="primary" @click="selectCourse(scope.row.id)">选课</el-button>
+          <el-button type="primary" @click="selectCourse(scope.row.id)">选择</el-button>
           <el-button type="success" @click="handleEdit(scope.row)" v-if="user.role === 'ROLE_ADMIN'">编辑 <i class="el-icon-edit"></i></el-button>
           <el-popconfirm
               class="ml-5"
@@ -65,18 +63,12 @@
       </el-pagination>
     </div>
 
-    <el-dialog title="课程信息" :visible.sync="dialogFormVisible" width="30%" >
+    <el-dialog title="项目信息" :visible.sync="dialogFormVisible" width="30%" >
       <el-form label-width="80px" size="small">
-        <el-form-item label="名称">
+        <el-form-item label="项目名称">
           <el-input v-model="form.name" autocomplete="off"></el-input>
         </el-form-item>
-        <el-form-item label="学分">
-          <el-input v-model="form.score" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="课时">
-          <el-input v-model="form.times" autocomplete="off"></el-input>
-        </el-form-item>
-        <el-form-item label="老师">
+        <el-form-item label="导师">
           <el-select clearable v-model="form.teacherId" placeholder="请选择">
             <el-option v-for="item in teachers" :key="item.id" :label="item.nickname" :value="item.id"></el-option>
           </el-select>
@@ -116,7 +108,7 @@ export default {
     selectCourse(courseId) {
       this.request.post('/course/studentCourse/' + courseId + "/" + this.user.id).then(res => {
         if (res.code === '200') {
-          this.$message.success("选课成功")
+          this.$message.success("选择成功")
         } else {
           this.$message.success(res.msg)
         }

@@ -132,7 +132,7 @@ CREATE TABLE `sys_menu`  (
 -- ----------------------------
 INSERT INTO `sys_menu` VALUES (2, '数据中心', '/dashbord', 'el-icon-s-marketing', '11', NULL, 'Dashbord', 100);
 INSERT INTO `sys_menu` VALUES (4, '系统管理', NULL, 'el-icon-s-grid', NULL, NULL, NULL, 300);
-INSERT INTO `sys_menu` VALUES (5, '员工管理', '/user', 'el-icon-user', NULL, 4, 'User', 301);
+INSERT INTO `sys_menu` VALUES (5, '人员管理', '/user', 'el-icon-user', NULL, 4, 'User', 301);
 INSERT INTO `sys_menu` VALUES (6, '权限设置', '/role', 'el-icon-s-custom', NULL, 4, 'Role', 302);
 INSERT INTO `sys_menu` VALUES (7, '菜单管理', '/menu', 'el-icon-menu', NULL, 4, 'Menu', 303);
 INSERT INTO `sys_menu` VALUES (8, '文件管理', '/file', 'el-icon-document', NULL, 4, 'File', 304);

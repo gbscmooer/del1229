@@ -161,7 +161,7 @@ export default {
 }
 
 >>> .el-dropdown-menu__item a {
-  color: #606266;
+  color: #518aff;
   text-decoration: none;
 }>>> .el-dropdown-menu__item:hover a {
    color: rgba(99, 102, 241, 0.16);

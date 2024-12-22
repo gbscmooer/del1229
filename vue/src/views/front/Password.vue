@@ -75,7 +75,7 @@ export default {
   justify-content: center;
   align-items: center;
   min-height: calc(100vh - 60px);
-  background: linear-gradient(135deg, #a5b4fc 0%, #fca5a5 100%);
+  background: linear-gradient(135deg, #a5b4fc 0%, #ff6363 100%);
   padding: 20px;
 }
 
