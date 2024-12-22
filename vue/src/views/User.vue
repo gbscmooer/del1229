@@ -34,8 +34,8 @@
       <el-table-column prop="role" label="角色">
         <template slot-scope="scope">
           <el-tag type="primary" v-if="scope.row.role === 'ROLE_ADMIN'">管理员</el-tag>
-          <el-tag type="warning" v-if="scope.row.role === 'ROLE_TEACHER'">老师</el-tag>
-          <el-tag type="success" v-if="scope.row.role === 'ROLE_STUDENT'">学生</el-tag>
+          <el-tag type="warning" v-if="scope.row.role === 'ROLE_TEACHER'">研究员</el-tag>
+          <el-tag type="success" v-if="scope.row.role === 'ROLE_STUDENT'">访客</el-tag>
         </template>
       </el-table-column>
       <el-table-column prop="nickname" label="昵称" width="120"></el-table-column>
@@ -102,15 +102,15 @@
       </div>
     </el-dialog>
 
-    <el-dialog title="课程信息" :visible.sync="vis" width="30%" >
+    <el-dialog title="项目信息" :visible.sync="vis" width="30%" >
       <el-table :data="courses" border stripe>
-        <el-table-column prop="name" label="课程名称"></el-table-column>
+        <el-table-column prop="name" label="项目名称"></el-table-column>
       </el-table>
     </el-dialog>
 
-    <el-dialog title="课程信息" :visible.sync="stuVis" width="30%" >
+    <el-dialog title="项目信息" :visible.sync="stuVis" width="30%" >
       <el-table :data="stuCourses" border stripe>
-        <el-table-column prop="name" label="课程名称"></el-table-column>
+        <el-table-column prop="name" label="项目名称"></el-table-column>
       </el-table>
     </el-dialog>
   </div>

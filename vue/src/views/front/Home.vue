@@ -84,11 +84,10 @@ export default {
   data() {
     return {
       imgs: [
-        require("../../assets/1600px-1.3寰宇蝗灾.png"),  // 轮播图图片
+        require("../../assets/1600px-1.3寰宇蝗灾.png"),
+        require("../../assets/g1.jpg")// 轮播图图片
       ],
       files: [
-        { id: 1, name: "太空电梯", url: require("../../assets/下载.jpeg") },
-        { id: 2, name: "接待大厅", url: require("../../assets/下载 (1).jpeg") }
       ]
     }
   }
