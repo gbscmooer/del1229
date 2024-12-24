@@ -1,13 +1,16 @@
 server:
-  ip: localhost
+  #ip: localhost
+  ip: 172.29.157.189
   port: 9090
 
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/kokomi?useSSL=false&serverTimezone=UTC
+    #url: jdbc:mysql://localhost:3306/kokomi?useSSL=false&serverTimezone=UTC
+    url: jdbc:mysql://172.29.157.189:3306/kokomi?useSSL=false&serverTimezone=UTC
     username: root
-    password: deDbij-gusbow-nocza4
+    #password: deDbij-gusbow-nocza4
+    password: kokomi
   redis:
     host: 127.0.0.1
     port: 6379
@@ -25,5 +28,5 @@ mybatis-plus:
 
 files:
   upload:
-    path: /Users/katisarrow/Documents/del1229/files/
-#    path: /home/files/
+    #path: /Users/katisarrow/Documents/del1229/files/
+    path: /home/files/

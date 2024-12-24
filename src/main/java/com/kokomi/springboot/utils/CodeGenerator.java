@@ -12,7 +12,7 @@ public class CodeGenerator {
     }
 
     private static void generate() {
-        FastAutoGenerator.create("jdbc:mysql://localhost:3306/kokomi?useSSL=false&serverTimezone=UTC", "root", "deDbij-gusbow-nocza4")
+        FastAutoGenerator.create("jdbc:mysql://172.29.157.189:3306/kokomi?useSSL=false&serverTimezone=UTC", "root", "deDbij-gusbow-nocza4")
                 .globalConfig(builder -> {
                     builder.author("kokomi") // 设置作者
                             .enableSwagger() // 开启 swagger 模式
