@@ -39,19 +39,22 @@ public class SwaggerConfig {
 
     /**
      * 创建该API的基本信息（这些基本信息会展现在文档页面中）
-     * 访问地址：http://ip:port/swagger-ui.html
+     * 访问地址：[root@iZbp1gbdxaj9cbgjyran0yZ ~]# ps -ef | grep java
+     * root      4519     1  0 12月26 ?      00:01:37 java -jar springboot-0.0.1-SNAPSHOT.jar
+     * root      5932  5864  0 14:14 pts/3    00:00:00 grep --color=auto java
      *
      * @return
      */
     private ApiInfo apiInfo(String title, String version) {
         return new ApiInfoBuilder()
                 .title(title)
-                .description("更多请关注: https://blog.csdn.net/xqnode")
-                .termsOfServiceUrl("https://blog.csdn.net/xqnode")
-                .contact(new Contact("xqnode", "https://blog.csdn.net/xqnode", "xiaqingweb@163.com"))
+                .description("")
+                .termsOfServiceUrl("")
+                .contact(new Contact("", "", ""))
                 .version(version)
                 .build();
     }
 
 
 }
+//
